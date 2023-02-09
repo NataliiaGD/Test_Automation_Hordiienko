@@ -14,7 +14,7 @@ public class ConfigProvider {
         try {
             properties.load(ClassLoader.getSystemResourceAsStream(CONFIG_PATH));
         } catch (IOException e) {
-            throw new RuntimeException("Could not load property file");
+            throw new RuntimeException("Couldn't load property file");
         }
         return properties;
     }
