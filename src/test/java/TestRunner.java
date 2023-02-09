@@ -9,14 +9,13 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class TestRunner {
-        public WebDriver driver;
+        public WebDriver driver =  WebDriverFactory.getDriver();
         public WebElement testing;
         public WebElement qaAutomation;
         public WebElement courseName;
-        public WebDriverWait waiter;
+        public WebDriverWait waiter = new WebDriverWait(driver,5);
     @Test
     public void openQaAutomationPage () {
-        driver =  WebDriverFactory.getDriver();
         driver.get(ConfigProvider.BASE_URL);
         testing = driver.findElement(
                 By.xpath("(//a[@class='block-course-cats_link course-cat-bar'])[2]"));
@@ -26,7 +25,6 @@ public class TestRunner {
         qaAutomation.click();
         courseName = driver.findElement(
                 By.xpath("//span[@class='course-descriptor_header-text']"));
-        waiter = new WebDriverWait(driver,5);
         waiter.until(ExpectedConditions.visibilityOf(courseName));
         Assert.assertEquals(courseName.getText(),"Курс QA Automation");
         driver.quit();
