@@ -31,8 +31,9 @@ public class WebDriverFactory {
     }
     public static WebDriver getChromeDriver() {
         if(driver == null){
-            WebDriverManager.chromedriver().browserVersion("109").setup();
+            WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
+            driver.manage().window().maximize();
         }
         return driver;
     }
