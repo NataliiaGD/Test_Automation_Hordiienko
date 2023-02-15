@@ -5,7 +5,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class QaAutomationPage extends BasePage{
-    //public WebDriver driver;
 
     @FindBy(xpath = "//span[@class = 'course-descriptor_header-text']" )
     public WebElement courseTitle;
