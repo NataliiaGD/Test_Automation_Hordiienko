@@ -9,10 +9,7 @@ import org.openqa.selenium.WebDriver;
 public class BaseTest {
     public static WebDriver driver = WebDriverFactory.getDriver();
     HomePage homePage = new HomePage(driver);
-    BlogPage blogPage = new BlogPage(driver);
-    FrondEndNewsPage frondEndNewsPage = new FrondEndNewsPage(driver);
-    GameDevNewsPage gameDevNewsPage = new GameDevNewsPage(driver);
-    TestingNewsPage testingNewsPage = new TestingNewsPage(driver);
+    static BlogPage blogPage = new BlogPage(driver);
 
     @Before
     public void beforeAll(){
