@@ -25,7 +25,7 @@ public class JunitTest extends BaseTest{
         });
     }
     @Test
-    public void checkAmountOfArticles(){
+    public void checkAmountOfArticles() {
         homePage.clickBlog();
         blogPage.clickPublicationsDropdown();
         category.click();
