@@ -1,0 +1,4 @@
+2023-02-26 18:56:23.938 [main] INFO  testNgTests.BaseTest - Test openQaAutomationPage started
+2023-02-26 18:56:36.738 [main] INFO  testNgTests.BaseTest - Test openQaAutomationPage finished with result success
+2023-02-26 18:56:37.169 [main] INFO  testNgTests.BaseTest - Test openQaAutomationPageFail started
+2023-02-26 18:56:39.653 [main] INFO  testNgTests.BaseTest - Test openQaAutomationPageFail finished with result fail 
