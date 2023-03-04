@@ -22,4 +22,12 @@ public class TestNgTest extends BaseTest{
         Assert.assertEquals(qaAutomationPage.getCourseTitle(),"Курс QA Automation");
         Assert.assertEquals(qaAutomationPage.getCourseRate(),"4.8");
     }
+    @Test
+    public void checkCourseLevel() {
+        homePage.clickTesting();
+        testingCoursesPage.clickQaAutomation();
+        waiter.until(ExpectedConditions.visibilityOf(qaAutomationPage.courseTitle));
+        Assert.assertEquals(qaAutomationPage.getCourseTitle(),"Курс QA Automation");
+        Assert.assertEquals(qaAutomationPage.getCourseLevel(),"ADVANCED LEVEL");
+    }
 }
