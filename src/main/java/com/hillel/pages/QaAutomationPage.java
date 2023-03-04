@@ -11,6 +11,8 @@ public class QaAutomationPage extends BasePage{
 
     @FindBy(xpath = "//span[@class = 'course-rating_average']")
     public WebElement courseRate;
+    @FindBy(xpath = "//span[@class='course-descriptor_level c-advanced']")
+    public WebElement courseLevel;
 
     @FindBy(xpath = "//a[@class='site-logo-link']")
     public WebElement logoHillel;
@@ -23,6 +25,9 @@ public class QaAutomationPage extends BasePage{
     }
     public String getCourseRate(){
         return courseRate.getText();
+    }
+    public String getCourseLevel(){
+        return courseLevel.getText();
     }
     public void clickOnTheLogo(){
         logoHillel.click();
