@@ -4,7 +4,7 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
         features = "src/test/java/cucumber/feature",
-        plugin = {"pretty"}
+        plugin = {"pretty", "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"}
 )
 public class CucumberTestRunner extends AbstractTestNGCucumberTests {
 }
